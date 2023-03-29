@@ -5,12 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .card-title {
+            font-size: 2.5rem;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    
+        th {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6c757d;
+        }
+    
+        td {
+            font-size: 1.1rem;
+            color: #343a40;
+        }
+    
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #007bff;
+        }
+    </style>
     <title>Dojos and Ninjas</title>
 </head>
 <body>
     <div class="card-body">
-        <h2 class="card-title text-primary">{{dojo.name}} Ninjas</h2>
-        <table class="table table-info">
+        <h2 class="card-title">{{dojo.name}} Ninjas</h2>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -18,7 +48,6 @@
                     <th>Age</th>
                 </tr>
             </thead>
-
             <tbody>
                 {% for ninja in dojo.ninjas %}
                 <tr>
@@ -30,7 +59,6 @@
             </tbody>
         </table>
     </div>
-</div>
-<a href="/" class="text-center mx-auto">Home</a>
+    <a href="/">Home</a>
 </body>
-</html>
+</html>    

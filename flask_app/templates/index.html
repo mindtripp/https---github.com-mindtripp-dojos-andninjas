@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Dojos and Ninjas</title>
 </head>
-<body>
-    <div class="d-flex justify-content-around">
-        <form action="/create/dojo" method="post" class="col-4 bg-dark p-4 my-5 text-light" >
-            <h2 class="text-center text-primary">New Dojo</h2>
+<body style="background-color: #f7f7f7;">
+    <div class="d-flex justify-content-around mt-5">
+        <form action="/create/dojo" method="post" class="col-4 bg-dark p-4 text-light shadow rounded" >
+            <h2 class="text-center text-primary mb-4">New Dojo</h2>
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name" class="text-light">Name:</label>
                 <input type="text" name="name" class="form-control">
             </div>
-            <input type="submit" value="Add Dojo" class="btn btn-primary btn-outline-dark">
+            <input type="submit" value="Add Dojo" class="btn btn-primary btn-outline-light mt-4">
         </form>
-        <div class="col-4 bg-dark text-light text-center my-5 p-4">
-            <h2 class="text-primary">All Dojos</h2>
+        <div class="col-4 bg-dark text-light text-center shadow rounded">
+            <h2 class="text-primary mt-4 mb-5">All Dojos</h2>
             {% for d in all_dojos %}
-            <p> 
+            <p class="mb-3"> 
                 <a href="/dojo/{{d.id}}" class="text-warning">{{d.name}}</a>
             </p>
             {% endfor %}
         </div>
     </div>
-    <a href="/ninjas" class="text-center mx-auto">Add Ninja</a>
+    <a href="/ninjas" class="text-center mx-auto d-block mt-4 text-primary">Add Ninja</a>
 </body>
 </html>
